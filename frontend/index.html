@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Ledger — Panel de productos scrapeados</title>
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+<main class="receipt">
+  <div class="receipt-head">
+    <p class="eyebrow">Web scraper &middot; pipeline de datos</p>
+    <h1>Listado de Mercado</h1>
+    <p class="sub">Registros almacenados en Supabase</p>
+    <div class="barcode" id="barcode" aria-hidden="true"></div>
+  </div>
+
+  <div class="toolbar">
+    <span class="count">Total <strong id="item-count">0</strong> items</span>
+    <button id="refresh-btn" type="button">Reimprimir</button>
+  </div>
+
+  <div class="filters" id="filters">
+    <button class="filter-chip active" data-cat="all" type="button">Todos</button>
+  </div>
+
+  <div class="items" id="items-container">
+    <p class="state-msg">Cargando registros...</p>
+  </div>
+
+  <div class="receipt-foot">
+    <span class="stamp" id="last-sync">Sin sincronizar aún</span>
+  </div>
+</main>
+
+<script src="script.js"></script>
+
+</body>
+</html>
